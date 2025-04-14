@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥Lari Morias – Acesso VIP🔒</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.2);
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.6rem; /* Reduzi o tamanho do texto aqui */
+      color: #00bfff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00bfff;
+    }
+
+    h2 {
+      color: #ffc0cb;
+      margin-top: 40px;
+      text-shadow: 0 0 5px #ff69b4;
+    }
+
+    .urgente {
+      font-size: 1.4rem;
+      color: #ff0000;
+      animation: piscar 0.8s infinite;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    @keyframes piscar {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 12px;
+      border: none;
+      font-size: 18px;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff69b4, #ff1493);
+      color: #fff;
+      padding: 18px 30px;
+      margin: 12px;
+      border-radius: 16px;
+      font-weight: bold;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #ff1493;
+    }
+
+    #statusPagamento {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .copy-btn {
+      background-color: #111;
+      color: white;
+      margin-top: 10px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      border: 2px solid #ff69b4;
+    }
+
+    .badge-seguro {
+      background-color: #00ffcc;
+      color: black;
+      padding: 10px 18px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    .notificacao {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background: #111;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      opacity: 0;
+      animation: aparecer 8s infinite;
+    }
+
+    @keyframes aparecer {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      95% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .contador {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px 20px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 0 12px #ff69b4;
+      color: #fff;
+    }
+
+    .live-banner {
+      background: linear-gradient(90deg, #ff1493, #ff69b4);
+      color: black;
+      padding: 16px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 14px;
+      margin-top: 25px;
+      box-shadow: 0 0 18px #ff69b4;
+      animation: piscar 1s infinite;
+    }
+
+    /* Seções inicialmente escondidas */
+    #codigoSecao, #verificarSecao {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="videozada.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+  <h1>🔒Acesso VIP Proibido – Lari Morais🔞</h1>
+  <p class="urgente">⚠️ Você foi convidado a algo proibido... poucos conseguem entrar</p>
+  <div class="contador" id="timer">Expira em: 04:59</div>
+  <div class="live-banner">🎥 LIVE AO VIVO rolando AGORA no grupo VIP! Últimas 2 vagas disponíveis!</div>
+
+  <h2>💸 Digite quanto você quer investir no SEU prazer:</h2>
+  <input type="text" id="valor" placeholder="Ex: 9,99 ou 9R$ ou só 9">
+  <button onclick="gerarPix()">💥 Liberar Acesso VIP</button>
+
+  <!-- Seção de código gerado, inicialmente escondida -->
+  <div id="codigoSecao">
+    <h2>📥 Copie o PIX gerado abaixo:</h2>
+    <textarea id="codigoPix" readonly></textarea>
+    <div><button class="copy-btn" onclick="copiarPix()">📋 Copiar Código</button></div>
+  </div>
+
+  <!-- Seção de verificar pagamento, inicialmente escondida -->
+  <div id="verificarSecao">
+    <div id="statusPagamento">⏳ Código gerado... só falta você liberar o proibido</div>
+    <button onclick="verificarPagamento()">🔄 Verificar Pagamento</button>
+  </div>
+
+  <div class="badge-seguro">🔐 Verificado | Seguro | Nenhum dado é armazenado</div>
+</div>
+
+<div class="notificacao" id="notificacao"></div>
+
+<script>
+let transacaoID = '';
+const token = "24145|PHDwDY8OtEQHKXfLBOcM7sJDGAHlJU2a0gPK2VlA1b1661e3"; // Novo token
+let tempo = 299;
+const timerEl = document.getElementById('timer');
+
+function normalizarValor(valorStr) {
+  valorStr = valorStr.replace(/r\$|reais|real| /gi, '').replace(',', '.');
+  const numero = parseFloat(valorStr);
+  return isNaN(numero) ? null : Math.round(numero * 100);
+}
+
+function gerarPix() {
+  const valorTexto = document.getElementById('valor').value;
+  const valorCentavos = normalizarValor(valorTexto);
+  if (valorCentavos === null || valorCentavos < 100) {
+    alert("⚠️ Digite um valor válido! Mínimo R$1,00");
+    return;
+  }
+
+  document.getElementById('statusPagamento').innerText = "⏳ Gerando seu código exclusivo...";
+
+  fetch("https://api.pushinpay.com.br/api/pix/cashIn", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      value: valorCentavos,
+      webhook_url: ""
+    })
+  })
+  .then(res => res.json())
+  .then(json => {
+    transacaoID = json.id;
+    document.getElementById('codigoPix').value = json.qr_code || 'Erro';
+    
+    // Mostrar as seções após o código ser gerado
+    document.getElementById('codigoSecao').style.display = 'block';
+    document.getElementById('verificarSecao').style.display = 'block';
+
+    document.getElementById('statusPagamento').innerText = "💸 PIX gerado. Liberte o desejo antes que expire...";
+  });
+}
+
+function verificarPagamento() {
+  if (!transacaoID) return alert("🚫 Nenhuma transação ativa");
+
+  fetch(`https://api.pushinpay.com.br/api/transactions/${transacaoID}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Accept": "application/json"
+    }
+  })
+  .then(res => res.json())
+  .then(json => {
+    if (json.status === "paid") {
+      document.getElementById('statusPagamento').innerText = "✅ Pagamento confirmado! Liberando seu acesso VIP...";
+      setTimeout(() => {
+        window.location.href = "entrega.html";
+      }, 3000);
+    } else {
+      document.getElementById('statusPagamento').innerText = `⏳ Status: ${json.status}`;
+    }
+  });
+}
+
+function copiarPix() {
+  const codigo = document.getElementById('codigoPix');
+  codigo.select();
+  document.execCommand('copy');
+  alert("✅ PIX copiado! Pague agora e caia dentro do proibido 🔞");
+}
+
+const notificacoes = [
+  "Lucas acabou de se tornar VIP e entrou na chamada...",
+  "Bruno liberou o acesso e já está vendo ao vivo!",
+  "Thiago entrou agora no grupo secreto 🔥",
+  "Rafael está aproveitando o conteúdo exclusivo 😏",
+  "Henrique virou VIP e já está online na live!",
+  "Caio ativou o acesso completo – está AO VIVO",
+  "Matheus acabou de entrar na sala privada",
+  "João desbloqueou tudo e já tá lá dentro!",
+  "Felipe fez o PIX e virou VIP em segundos",
+  "André se conectou à transmissão secreta",
+  "Pedro entrou na chamada proibida",
+  "Diego acessou o grupo dos mais safados 😈"
+];
+
+let notiIndex = 0;
+setInterval(() => {
+  const notiDiv = document.getElementById('notificacao');
+  notiDiv.textContent = notificacoes[notiIndex];
+  notiDiv.style.opacity = 1;
+  notiIndex = (notiIndex + 1) % notificacoes.length;
+}, 8000);
+
+setInterval(() => {
+  if (tempo > 0) {
+    let min = Math.floor(tempo / 60);
+    let seg = tempo % 60;
+    timerEl.textContent = `Expira em: ${String(min).padStart(2, '0')}:${String(seg).padStart(2, '0')}`;
+    tempo--;
+  } else {
+    tempo = 299;
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
